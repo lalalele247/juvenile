@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Скачать приложения</title>
+    <style>
+        /* Общие стили для страницы */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            /* Задний фон сайта */
+            background: url('back.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Верхний левый угол с кнопками-ссылками (Telegram и TikTok) */
+        .top-links {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+
+        .top-links a img {
+            width: 40px; /* Размер иконок соцсетей */
+            height: auto;
+            transition: transform 0.2s ease;
+        }
+
+        .top-links a:hover img {
+            transform: scale(1.1); /* Эффект увеличения при наведении */
+        }
+
+        /* Главный контейнер для контента по центру */
+        .main-container {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 80px; /* Чтобы контент на мобильных не перекрывал левые кнопки */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Маленькая серая текстовая надпись НАД логотипом */
+        .top-text-btn {
+            display: inline-block;
+            font-size: 11px;
+            color: #6c757d;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 4px 0;
+            margin-bottom: 20px;
+            transition: color 0.2s ease;
+        }
+
+        .top-text-btn:hover {
+            color: #343a40;
+        }
+
+        /* Стили для логотипа (Размер увеличен) */
+        .logo-container {
+            width: 100%;
+            max-width: 500px; /* Было 400px — теперь логотип стал больше на ПК */
+            margin-bottom: 45px;
+            padding: 0 20px;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Контейнер для 3 кнопок скачивания (Вертикальное расположение) */
+        .download-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 22px; /* Чуть увеличили отступ между кнопками */
+            width: 100%;
+        }
+
+        /* Стили для кнопок (Размер увеличен) */
+        .download-btn {
+            display: inline-block;
+            width: 240px; /* Было 190px — теперь кнопки стали крупнее и солиднее */
+            transition: transform 0.2s ease;
+        }
+
+        .download-btn img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Адаптивный дизайн для мобильных экранов */
+        @media (max-width: 600px) {
+            .top-links {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 15px;
+            }
+
+            .main-container {
+                margin-top: 70px;
+            }
+
+            .logo-container {
+                max-width: 340px; /* Было 300px — на мобильных логотип тоже стал крупнее */
+            }
+
+            .download-btn {
+                width: 210px; /* На мобильных кнопках сделали компромиссный увеличенный размер */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-links">
+        <a href="https://t.me/Juvenileoffc" target="_blank">
+            <img src="tg.png" alt="Telegram">
+        </a>
+        <a href="https://tiktok.com/@Juvenileoffc" target="_blank">
+            <img src="tikt.png" alt="TikTok">
+        </a>
+    </div>
+
+    <div class="main-container">
+        
+        <a href="https://t.me/Lerya247" class="top-text-btn">lerya247</a>
+
+        <div class="logo-container">
+            <img src="logo.png" alt="Логотип сайта">
+        </div>
+
+        <div class="download-buttons">
+            <a href="files/3.png" class="download-btn" download>
+                <img src="win.png" alt="Скачать для Windows">
+            </a>
+
+            <a href="files/2.png" class="download-btn" download>
+                <img src="andr.png" alt="Скачать для Android">
+            </a>
+
+            <a href="files/1.png" class="download-btn" download>
+                <img src="lin.png" alt="Скачать для Linux">
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
